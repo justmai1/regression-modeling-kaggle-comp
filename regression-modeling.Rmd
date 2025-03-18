@@ -1,0 +1,42 @@
+---
+title: "\\textbf{Regression Modeling Kaggle Competition}"
+author: "Justin Mai"
+output:
+  pdf_document:
+    toc: true
+    latex_engine: xelatex
+  html_document: default
+geometry: margin=37pt
+fontsize: 11pt
+header-includes:
+  - \usepackage{titling}
+  - \usepackage{titlesec}
+  - \titlespacing*{\title}{0pt}{0pt}{0pt}
+  - \setlength{\droptitle}{-2em}
+  - \setlength{\topskip}{0pt} 
+mainfont: "Times New Roman"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+# 1. Introduction
+
+# 2. Methods
+
+```{r}
+test <- read.csv("data/test.csv")
+train <- read.csv("data/train.csv")
+```
+
+```{r}
+summary(lm(price ~ milage + brand + fuel_type + model_year, data=train))
+```
+
+
+
